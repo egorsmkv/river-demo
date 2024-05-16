@@ -62,11 +62,11 @@ func (a *api) insertJob(args worker.ExampleJobArgs) (*rivertype.JobInsertResult,
 func parseArgs() {
 	flaggy.SetName("rivder-demo")
 	flaggy.SetDescription("A program to test github.com/riverqueue/river")
+	flaggy.SetVersion("1.0")
 
 	flaggy.Bool(&argDoMigrate, "g", "migrate", "Perform migration")
 	flaggy.Bool(&argProduceTasks, "p", "produce", "Produce tasks")
 
-	flaggy.SetVersion("1.0")
 	flaggy.Parse()
 }
 
